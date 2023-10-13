@@ -28,6 +28,17 @@
   <!-- This class is removed if the user has JavaScript enabled -->
   <body class="no-js">
     <header>
+      <!-- Nav between html -->
+      <div class="container nav-webpage">
+        <nav>
+          <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <!-- Add more as needed -->
+          </ul>
+        </nav>
+      </div>
       <!-- Dark mode toggle -->
       <div class="mode-toggle">
         <button class="[ toggle-button ] [ js-mode-toggle ]">
@@ -35,39 +46,50 @@
           <span class="[ toggle-text ] [ js-mode-toggle-text ]">Switch to dark theme</span>
         </button>
       </div>
+      
     </header>
     <main>
-      <div class="container">
+      
+      <div class="about-container">
         <section class="about">
           <h1>Eren Enou</h1>
-          <p>Eren is a wishful thinker that understands how to use the tools at her disposal.</p>
+          <p>I'm Eren, an accomplished accountant stepping into the exciting world of Software Development. With a penchant for numbers and a passion for technology, I aim to merge these domains to innovate efficient financial solutions. When not immersed in professional endeavors, I relish the artistry in manga, the strategic allure of Dungeons & Dragons, and the freeing experience of longboarding.</p>
         </section>
         <section class="profile-pic">
           <img src="images/IMG_1033.JPG" alt="Eren's picture">
         </section>
-
       </div>
-      <nav class="links">
-        <!-- Update <a href=""> to point to your accounts -->
-        <!-- Update <span> to your usernames -->
-        <a href="mailto:erenenou@yahoo.com">
-          <strong>E-mail</strong>
-          <span>erenenou@yahoo.com</span>
-        </a>
-        <a href="https://twitter.com/enoueren">
-          <strong>Twitter</strong>
-          <span>@EnouEren</span>
-        </a>
-        <a href="https://www.linkedin.com/in/aaron-molnar-377a0b25a/">
-          <strong>LinkedIn</strong>
-          <span>@AaronMolnar</span>
-        </a>
-        <a href="https://github.com/Eren-Enou">
-          <strong>GitHub</strong>
-          <span>@ErenEnou</span>
-        </a>
-      </nav>
-    </main>
+      <div class="skills-container">
+        <section class="skills">
+          <!-- Accounting Skills -->
+          <div class="accounting-skills">
+              <h3>Accounting Skills</h3>
+              <ul>
+                  <li>Financial Reporting & Analysis</li>
+                  <li>Budgeting & Forecasting</li>
+                  <li>Accounts Reconciliation</li>
+                  <li>Tax Preparation</li>
+                  <li>Audit Procedures</li>
+                  <li>Cash Flow Management</li>
+                  <!-- Add more as needed -->
+              </ul>
+          </div>
+      
+          <!-- Coding Skills -->
+          <div class="coding-skills">
+              <h3>Coding Skills</h3>
+              <ul>
+                  <li>HTML & CSS</li>
+                  <li>JavaScript</li>
+                  <li>Python</li>
+                  <li>Version Control (Git & GitHub)</li>
+                  <li>Problem Solving</li>
+                  <li>Debugging</li>
+                  <!-- Add more as needed -->
+              </ul>
+          </div>
+      </section>
+      </div>
 
     <!-- Dark mode button functionality -->
     <script src="/js/dark-mode.js"></script>

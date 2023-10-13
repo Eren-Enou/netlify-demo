@@ -270,16 +270,113 @@ main {
   background-color: var(--background-alt);
 }
 
-/* Images section */
-.profile-pic {
-  display: block;
-  text-align: center; /* Center the image horizontally if it's an inline element inside this block */
+/* Ensuring both containers are block-level elements */
+.about-container, .skills-container {
+  display: block; /* This makes the element block-level, causing it to start on a new line and take up the full width available */
+  width: 100%; /* This ensures the element takes up the full width of its parent container */
+  clear: both; /* This ensures that the element will not move up next to floating elements */
 }
 
+/* If there are any floated elements inside your containers, this will contain the float */
+.about-container::after, .skills-container::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Specific Container for About and Profile Pic sections */
+.about-container {
+  display: flex; /* Enable Flexbox layout */
+  width: 100%; /* Full width */
+}
+
+/* About Section */
+.about {
+  flex: 1; /* Allow the section to grow and occupy the remaining space */
+  max-width: 55%; /* Limit the width to 65% */
+  padding-right: 20px; /* Add right padding to create space between text and image */
+}
+
+/* Profile Pic Section */
+.profile-pic {
+  flex-shrink: 0; /* Prevent the image container from shrinking */
+  width: 35%; /* Set a fixed width */
+  margin-left: 50px; /* Add left margin to create space between image and text */
+}
+
+/* Ensure the image is responsive and doesn't overflow the container */
 .profile-pic img {
+  max-width: 100%; /* Ensure the image doesn’t exceed the container width */
+  height: auto; /* Maintain the image’s aspect ratio */
   border-radius: 50%; /* Make the image circular */
-  object-fit: cover; /* Make sure the image covers the entire element */
-  object-position: center; /* Adjust as necessary to focus on the face */
-  width: 275px;
-  height: 275px; /* Adjust the width and height to create a square container */
+  object-fit: cover; /* Cover the entire element */
+}
+
+/* HTML NAV section with Dark/Light Mode Adaptation */
+
+/* Reset the default styling of the ul element */
+.container.nav-webpage ul {
+  list-style-type: none; /* Removes the default list icons/bullets */
+  margin: 0; /* Removes the default margin */
+  padding: 0; /* Removes the default padding */
+}
+
+/* Style each li element to display inline */
+.container.nav-webpage li {
+  display: inline; /* Makes list items display inline */
+  margin-right: 20px; /* Adds some space between the list items, adjust as needed */
+}
+
+/* Style for the a elements (links) using variable colors */
+.container.nav-webpage a {
+  text-decoration: none; /* Removes the underline from links */
+  color: var(--text-color); /* Uses variable for text color based on the selected mode */
+  transition: color 0.3s ease; /* Optional: Smooth color transition on hover */
+}
+
+/* Hover effect for the links using variable colors */
+.container.nav-webpage a:hover {
+  color: var(--border-color); /* Uses variable for hover color based on the selected mode */
+}
+
+/* Focus effect for accessibility, using variable colors */
+.container.nav-webpage a:focus {
+  outline: 2px solid var(--border-color); /* Uses variable for focus outline color based on the selected mode */
+  outline-offset: 2px; /* Optional: Add space between the outline and the element */
+}
+
+
+/* Updated Skills Section for Separate Line Layout */
+.skills {
+  display: flex; /* Enable Flexbox layout */
+  justify-content: space-between; /* Add space between the two sections */
+  flex-wrap: wrap; /* Allow content to wrap onto the next line when the viewport width is too small */
+  gap: 20px; /* Add a gap between the two sections for better spacing */
+}
+
+/* Styling for Accounting & Coding Skills Sections */
+.accounting-skills, .coding-skills {
+  flex: 1; /* Allow both sections to grow and occupy the available space equally */
+  background-color: var(--background); /* Adapt background color based on color mode */
+  color: var(--text-color); /* Adapt text color based on color mode */
+  border: 2px solid var(--border-color); /* Adapt border color based on color mode */
+  padding: 15px; /* Adjust padding as needed */
+  border-radius: 10px; /* Rounded corners for the skills sections */
+}
+
+/* Responsive Design - Stack the Sections Vertically on Smaller Screens */
+@media (max-width: 768px) {
+  .accounting-skills, .coding-skills {
+    flex-basis: 100%; /* Make each section take up 100% width on smaller screens */
+  }
+}
+
+/* Updated Skill List Items with Color Scheme Adaptation */
+.skills li {
+  background-color: var(--background-alt); /* Adapt background color for list items based on color mode */
+  color: var(--text-color); /* Adapt text color for list items based on color mode */
+  border: 1px solid var(--border-color); /* Adapt border color for list items based on color mode */
+  margin-bottom: 10px; /* Space between skill items */
+  padding: 10px; /* Padding inside skill items */
+  border-radius: 5px; /* Rounded corners for skill items */
 }
