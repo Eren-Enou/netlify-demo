@@ -1,12 +1,58 @@
+<!DOCTYPE html>
+<html class="preload" lang="en">
+  <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
 
+    <!-- The name of your site that shows up in the browser tab -->
+    <title>Welcome to my site</title>
 
-<section class="about-detailed">
-    <h1>About Eren Enou</h1>
-    <p>Welcome! I'm Eren, a seasoned accountant with a keen interest in the ever-evolving landscape of application development. My professional journey has been enriched with experiences that honed my skills in finance, and now, I am enthusiastic about exploring the intersections where accounting meets technology.</p>
+    <!-- Describe what your site is about -->
+    <meta name="description" content="A list of places you can find me on the web.">
 
-    <p>My goal is to acquire adeptness in coding and leverage it to devise intuitive and innovative financial applications. I’m committed to learning and mastering this craft, envisaging a future where finance is seamlessly integrated with user-friendly technologies. I believe in the power of this synergy to transform traditional accounting into a more dynamic and interactive experience.</p>
+    <!-- This is the small icon that shows up in the browser tab -->
+    <link rel="shortcut icon" href="/images/favicon.png">
 
-    <p>Outside the professional realm, I am an ardent manga enthusiast, finding solace and inspiration in the intricate artwork and compelling narratives. I’m also an avid player of Dungeons & Dragons, a game that fuels my imagination and satisfies my appetite for strategic thinking. Longboarding is another passion, offering me moments of thrill and tranquility amidst the hustle and bustle of life.</p>
+    <!-- Styling for this site -->
+    <link rel="stylesheet" href="/css/styles.css">
+  </head>
 
-    <p>I am on an exciting journey of professional growth and personal discovery. With every challenge and opportunity, I am shaping a future where my professional expertise and personal passions converge, leading to innovation that is as efficient as it is exciting. I invite you to explore this journey with me!</p>
-</section>
+  <!-- This class is removed if the user has JavaScript enabled -->
+  <body class="no-js">
+    <header>
+      <!-- Nav between html -->
+      <div class="container nav-webpage">
+        <nav>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <!-- Add more as needed -->
+          </ul>
+        </nav>
+      </div>
+      <!-- Dark mode toggle -->
+      <div class="mode-toggle">
+        <button class="[ toggle-button ] [ js-mode-toggle ]">
+          <span class="toggle-icon" aria-hidden="true"></span>
+          <span class="[ toggle-text ] [ js-mode-toggle-text ]">Switch to dark theme</span>
+        </button>
+      </div>
+      
+    </header>
+    <main>
+        <section class="about-detailed">
+            <h1>About Eren Enou</h1>
+            <p>Welcome! I'm Eren, a seasoned accountant with a keen interest in the ever-evolving landscape of software development. My professional journey has been enriched with experiences that honed my skills in finance, and now, I am enthusiastic about exploring the intersections where accounting meets technology.</p>
+        
+            <p>My goal is to acquire adeptness in coding and leverage it to devise intuitive and innovative financial applications. I’m committed to learning and mastering this craft, envisaging a future where finance is seamlessly integrated with user-friendly technologies. I believe in the power of this synergy to transform traditional accounting into a more dynamic and interactive experience.</p>
+        
+            <p>Outside the professional realm, I am an ardent manga enthusiast, finding solace and inspiration in the intricate artwork and compelling narratives. I’m also an avid player of Dungeons & Dragons, a game that fuels my imagination and satisfies my appetite for strategic thinking. Longboarding is another passion, offering me moments of thrill and tranquility amidst the hustle and bustle of life.</p>
+        
+            <p>I am on an exciting journey of professional growth and personal discovery. With every challenge and opportunity, I am shaping a future where my professional expertise and personal passions converge, leading to innovation that is as efficient as it is exciting. I invite you to explore this journey with me!</p>
+        </section>
+    <!-- Dark mode button functionality -->
+    <script src="/js/dark-mode.js"></script>
+  </body>
+</html>
