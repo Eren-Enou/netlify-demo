@@ -269,3 +269,17 @@ main {
 .links > a:focus > strong {
   background-color: var(--background-alt);
 }
+
+/* Images section */
+.profile-pic {
+  display: block;
+  text-align: center; /* Center the image horizontally if it's an inline element inside this block */
+}
+
+.profile-pic img {
+  border-radius: 50%; /* Make the image circular */
+  object-fit: cover; /* Make sure the image covers the entire element */
+  object-position: center; /* Adjust as necessary to focus on the face */
+  width: 275px;
+  height: 275px; /* Adjust the width and height to create a square container */
+}
